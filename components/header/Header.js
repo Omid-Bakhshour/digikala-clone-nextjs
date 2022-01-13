@@ -1,17 +1,18 @@
 
 import ShoppingCartIcon from "@heroicons/react/outline/ShoppingCartIcon"
 import UserIcon from "@heroicons/react/outline/UserIcon"
+
 import Search from "./Search"
 
 
-function Header() {
+function Header({ isSearchOpen, setIsSearchOpen }) {
     return (
-        <div className="flex flex-row  px-2 py-4 bg-white">
+        <header className="flex fixed top-0 right-0 left-0 flex-row  px-2 py-4 bg-white z-[100]  min-w-[1000px] max-w-[1650px] ">
 
 
             {/* left */}
 
-            <div className="flex w-[360px] flex-row items-center max-w-[360px] ">
+            <div className="flex w-[360px] flex-row items-center max-w-[360px] relative ">
                 <div className="mr-4 ">
                     <ShoppingCartIcon className="w-7 h-7 text-[#4a5f73] " />
                 </div>
@@ -32,22 +33,22 @@ function Header() {
 
             {/* right */}
 
-            <div className="flex flex-row flex-1 justify-between">
+            <div className="flex flex-row flex-1 ">
 
                 {/* icon */}
 
-                <a href="/" className="mr-2">
+                <a href="/" className="mr-2 flex">
                     <img src="/images/img1.png" className="max-w-[132px]" />
 
                 </a>
 
                 {/* search input */}
 
-                <Search />
+                <Search isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
 
                 {/* logo */}
 
-                <div className="flex items-center" >
+                <div className="flex items-center relative z-[239]" >
 
                     <a href="/" className="h-[30px]" >
                         <img src="/images/logo.svg" />
@@ -59,7 +60,7 @@ function Header() {
 
             </div>
 
-        </div>
+        </header>
     )
 }
 
