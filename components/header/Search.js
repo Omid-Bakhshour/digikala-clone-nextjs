@@ -36,21 +36,21 @@ function Search({ isSearchOpen, setIsSearchOpen }) {
 
         <div className="flex relative flex-grow flex-1 flex-shrink mx-4" ref={searchRef} >
 
-            <input dir="rtl" onClick={() => setIsSearchOpen(true)} onCl placeholder="جست و جو در دیجی کالا ..."
+            <input dir="rtl" onClick={() => setIsSearchOpen(true)} placeholder="جست و جو در دیجی کالا ..."
                 className={` ${isSearchOpen ? "bg-white" : "bg-[#f0f0f1] rounded-lg"} w-full py-[14px] pl-3 pr-11 
                  outline-none text-right text-[#474747] text-xs z-[51] `} />
             <SearchIcon className="w-6 h-6 text-Gray2 absolute top-3 right-3 z-[51]  " />
 
 
-            <div className={` ${isSearchOpen ? "block" : "hidden"} absolute top-0 left-0 w-full pt-14 px-3 pb-4 z-[50] bg-white rounded-lg
-            shadow-md`}>
+            <div className={` ${isSearchOpen ? "block" : "hidden"}  absolute top-0 left-0 w-full pt-14 px-3 pb-4 z-[50] bg-white rounded-lg
+            shadow-lg  `}>
                 <div className="flex flex-col gap-y-3" >
 
                     <div className="flex flex-row items-center gap-x-3">
                         <TrashIcon className="w-5 h-5 text-Gray2" />
                         <span className="flex-1 text-right text-sm text-textblack font-[]">تاریخچه جستجوهای شما</span>
 
-                        <ClockIcon src={ClockIcon} className="w-5 h-5 text-Gray2" />
+                        <ClockIcon className="w-5 h-5 text-Gray2" />
 
                     </div>
 
@@ -69,7 +69,7 @@ function Search({ isSearchOpen, setIsSearchOpen }) {
                     <div className="flex flex-row items-center gap-x-3">
                         <span className="flex-1 text-right text-sm text-textblack font-[700]">بیشترین جستجوهای اخیر</span>
 
-                        <FireIcon src={ClockIcon} className="w-5 h-5 text-Gray2" />
+                        <FireIcon className="w-5 h-5 text-Gray2" />
 
                     </div>
 

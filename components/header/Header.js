@@ -7,7 +7,7 @@ import Search from "./Search"
 
 function Header({ isSearchOpen, setIsSearchOpen }) {
     return (
-        <header className="flex fixed top-0 right-0 left-0 flex-row  px-2 py-4 bg-white z-[100]  min-w-[1000px] max-w-[1650px] ">
+        <header className="flex fixed top-0 right-0 left-0 flex-row  px-4 py-4 bg-white z-[100]  min-w-[1000px] max-w-[1650px] ">
 
 
             {/* left */}

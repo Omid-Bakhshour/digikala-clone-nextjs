@@ -1,6 +1,6 @@
 
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import LocationIcon from "@heroicons/react/outline/LocationMarkerIcon"
 import MenuIcon from "@heroicons/react/outline/MenuAlt3Icon"
 import BagIcon from "@heroicons/react/outline/ShoppingBagIcon"
@@ -8,15 +8,9 @@ import DisIcon from "@heroicons/react/outline/ReceiptTaxIcon"
 import BadgeIcon from "@heroicons/react/outline/BadgeCheckIcon"
 import CheckIcon from "@heroicons/react/outline/CheckCircleIcon"
 import GiftIcon from "@heroicons/react/outline/GiftIcon"
+import NavCategory from "./NavCategory"
 
-
-
-
-
-
-
-
-function Navbar() {
+function Navbar({ isSearchOpen, setIsSearchOpen }) {
     const [show, handleShow] = useState(true);
     const [y, setY] = useState(0);
     const handleNavigation = () => {
@@ -33,6 +27,14 @@ function Navbar() {
         setY(window.scrollY);
 
     }
+
+    const [subMenu, setSubMenu] = useState({
+        category: false,
+        supermarket: false,
+        discounts: false,
+        digiPlus: false,
+        digiclub: false,
+    })
 
     useEffect(() => {
         setY(window.scrollY);
@@ -59,18 +61,18 @@ function Navbar() {
 
             {/* right */}
 
-            <ul className="flex flex-row-reverse items-center flex-1 h-11" >
+            <ul className="flex flex-row-reverse  items-center flex-1 gap-x-2" >
 
-                <li className="nav_row ml-5">
+                <li onMouseEnter={() => setSubMenu({ ...setSubMenu, category: true })} onMouseLeave={() => setSubMenu({ ...setSubMenu, category: false })}
+                    className="nav_row ml-5 pr-0 ">
                     <span className="nav_text2" >دسته‌بندی کالاها</span>
-
-                    <MenuIcon className="w-5 h-5 text-textBlack2" />
-
+                    <MenuIcon className="w-5 h-5 text-textBlack2 " />
+                    <NavCategory showsubMenu={subMenu.category} />
 
                 </li>
 
 
-                <li className="nav_row">
+                <li className="nav_row nav_border ">
                     <span className="nav_text2" >سوپرمارکت</span>
 
                     <BagIcon className="nav_icon" />
@@ -119,7 +121,7 @@ function Navbar() {
             </ul>
 
 
-        </div>
+        </div >
     )
 }
 
