@@ -13,8 +13,6 @@ function NavCategory({ showsubMenu }) {
 
 
     })
-
-
     return (
         <div className={`${showsubMenu ? "flex" : "hidden"} fixed top-full right-0 min-w-[1000px] max-w-[1650] mx-4 w-[calc(100%-2rem)]
             bg-white rounded-b-lg flex flex-row-reverse overflow-hidden `} >
@@ -58,12 +56,12 @@ function NavCategory({ showsubMenu }) {
                                 if (hasChild === "yes") {
                                     return (
                                         <>
-                                            <NavItem1 key={`${item1.name}oqiepoqipeoiqpoeiqoi`} text={item1.name} />
+                                            <NavItem1 customCss={"w-3/12"} key={`${item1.name}oqiepoqipeoiqpoeiqoi`} text={item1.name} />
 
                                             {item1?.childs?.map(item2 => {
 
                                                 return (
-                                                    <NavItem2 key={`${item2.name};aakd;lpoimx.sjdklsjk`} text={item2?.name} />
+                                                    <NavItem2 customCss={"w-3/12"} key={`${item2.name};aakd;lpoimx.sjdklsjk`} text={item2?.name} />
                                                 )
                                             })
 
@@ -73,7 +71,7 @@ function NavCategory({ showsubMenu }) {
                                     )
                                 } else {
                                     return (
-                                        <NavItem1 key={`${item1.name}a'dalkoeimbskjhfj`} text={item1?.name} />
+                                        <NavItem1 customCss={"w-3/12"} key={`${item1.name}a'dalkoeimbskjhfj`} text={item1?.name} />
 
                                     )
                                 }

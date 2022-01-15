@@ -10,6 +10,7 @@ import CheckIcon from "@heroicons/react/outline/CheckCircleIcon"
 import GiftIcon from "@heroicons/react/outline/GiftIcon"
 
 import NavCategory from "./NavCategory"
+import NavSupermarket from "./NavSupermarket"
 
 function Navbar({ setIsNavOpen }) {
     const [show, handleShow] = useState(true);
@@ -29,13 +30,7 @@ function Navbar({ setIsNavOpen }) {
 
     }
 
-    const [subMenu, setSubMenu] = useState({
-        category: false,
-        supermarket: false,
-        discounts: false,
-        digiPlus: false,
-        digiclub: false,
-    })
+    const [subMenu, setSubMenu] = useState(null)
 
     useEffect(() => {
         setY(window.scrollY);
@@ -47,8 +42,11 @@ function Navbar({ setIsNavOpen }) {
 
     const OpenNav = (type, value) => {
         if (type === "category") {
+            setSubMenu({ category: value });
+            setIsNavOpen(value);
 
-            setSubMenu({ ...setSubMenu, category: value });
+        } else if (type === "supermarket") {
+            setSubMenu({ supermarket: value });
             setIsNavOpen(value);
 
         }
@@ -78,23 +76,20 @@ function Navbar({ setIsNavOpen }) {
                     className="nav_row ml-5 pr-0 ">
                     <span className="nav_text2" >دسته‌بندی کالاها</span>
                     <MenuIcon className="w-5 h-5 text-textBlack2 " />
-                    <NavCategory showsubMenu={subMenu.category} />
+                    <NavCategory showsubMenu={subMenu?.category} />
 
                 </li>
 
-
-                <li className="nav_row nav_border ">
+                <li onMouseEnter={() => OpenNav("supermarket", true)} onMouseLeave={() => OpenNav("supermarket", false)}
+                    className="nav_row nav_border ">
                     <span className="nav_text2" >سوپرمارکت</span>
-
                     <BagIcon className="nav_icon" />
-
-
+                    <NavSupermarket showsubMenu={subMenu?.supermarket} />
                 </li>
 
 
                 <li className="nav_row">
                     <span className="nav_text2" >تخفیف‌ها و پیشنهادها</span>
-
                     <DisIcon className="nav_icon" />
 
 

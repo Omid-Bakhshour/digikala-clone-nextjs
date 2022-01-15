@@ -1,11 +1,11 @@
 
 
-function NavItem1({ text }) {
+function NavItem1({ text, customCss }) {
     return (
-        <li className="w-3/12 flex items-center justify-start relative before:absolute before:top-2 before:right-0
-        before:w-[2px] before:h-[14px] before:bg-customRed  h-[30px] cursor-default " >
-            <a className="text-textBlack3 text-[1rem] font-bold mr-2 hover:text-customRed cursor-pointer" >
-                <span  >{text}</span>
+        <li className={`${customCss} flex items-center justify-start relative after:absolute after:top-2 after:right-0
+        after:w-[2px] after:h-[14px] after:bg-customRed  h-[30px] cursor-default`} >
+            <a className="text-textBlack3 text-[0.85rem] font-semibold mr-2 hover:text-customRed cursor-pointer" >
+                <span>{text}</span>
             </a>
         </li>
     )
