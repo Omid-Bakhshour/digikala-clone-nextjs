@@ -17,6 +17,11 @@
     
  }
 
+ html, body {
+    height: 100%;
+    margin: 0px;
+}
+
  @layer components{
 
     .nav_text{
@@ -28,7 +33,7 @@
 
     .nav_row{
         @apply py-[7px] px-2  flex flex-row items-center gap-x-1 h-11 relative before:absolute before:bottom-0 before:left-0 before:right-0
-         before:bg-[#ef5661] before:contents before:h-[2px] before:scale-x-0 
+         before:bg-[#ef5661] before:contents before:h-[2px] before:scale-x-0 cursor-pointer
 
         before:transform before:transition before:duration-[400] before:ease-in-out before:hover:scale-x-100
     }

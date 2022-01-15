@@ -7,6 +7,8 @@ import Navbar from '../components/navbar/Navbar';
 export default function Home() {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
 
   return (
     <div className='bg-[#fcfcfc] min-h-[2000px] ' >
@@ -16,8 +18,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
-      <Navbar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
-      <div className={` ${isSearchOpen ? "block" : "hidden"} block fixed top-0 bottom-0 right-0 w-full h-full bg-[#acacac] opacity-50  z-[49]   `} />
+      <Navbar setIsNavOpen={setIsNavOpen} />
+      <div className={` ${isSearchOpen || isNavOpen ? "block" : "hidden"}   block fixed top-0 bottom-0 right-0 w-full h-full
+       bg-[#acacac] opacity-50  z-[49]   `} />
     </div>
   )
 }
