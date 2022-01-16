@@ -22,6 +22,24 @@
     margin: 0px;
 }
 
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
  @layer components{
 
     .nav_text{
@@ -45,5 +63,50 @@
         @apply after:absolute after:right-0 after:top-0 after:w-[1px]  after:h-2/4 after:bg-[#f0f0f1] after:translate-y-2/4
     }
 
+
+    /* slider-top */
+
+    .mySlides{
+        @apply hidden
+    }
+
+    /* Next & previous buttons */
+   .prev, .next {
+    @apply cursor-pointer absolute top-1/2 w-8 h-8  text-white font-bold transition transform ease-in z-[1] -mt-6
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    
+    @apply right-0 mr-3
+  }
+
+  .prev {
+    
+    @apply  ml-3
+  }
+  
+  
+  /* On hover, add a black background color with a little bit see-through */
+ .next:hover {
+
+    @apply translate-x-2 scale-105 duration-200
+  }
+
+  .prev:hover {
+
+    @apply -translate-x-2 scale-105 duration-200
+  }
+
+  .dot {
+   
+
+    @apply cursor-pointer h-[10px] w-[10px] mx-2 bg-white rounded-full  transition transform duration-500 ease-in
+  }
+
+  .dot.active{
+     @apply scale-110 bg-[#00bfd6] 
+  }
+  
     
 }

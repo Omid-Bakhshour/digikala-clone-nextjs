@@ -20,7 +20,7 @@ function Navbar({ setIsNavOpen }) {
             handleShow(true)
 
         } else if (y < window.scrollY) {
-            if (window.scrollY > 200) {
+            if (window.scrollY > 50) {
                 handleShow(false)
             } else {
                 handleShow(true)

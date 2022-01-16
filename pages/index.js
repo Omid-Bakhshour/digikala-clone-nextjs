@@ -3,6 +3,7 @@ import Header from '../components/header/Header'
 
 import { useState } from 'react';
 import Navbar from '../components/navbar/Navbar';
+import Landing from "../components/Landing/Index"
 
 export default function Home() {
 
@@ -19,8 +20,13 @@ export default function Home() {
       </Head>
       <Header isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
       <Navbar setIsNavOpen={setIsNavOpen} />
+
       <div className={` ${isSearchOpen || isNavOpen ? "block" : "hidden"}   block fixed top-0 bottom-0 right-0 w-full h-full
        bg-[#acacac] opacity-50  z-[49]   `} />
+
+      <Landing />
+
+
     </div>
   )
 }
