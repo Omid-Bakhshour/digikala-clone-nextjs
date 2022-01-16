@@ -73,51 +73,51 @@ function Navbar({ setIsNavOpen }) {
             <ul className="flex flex-row-reverse  items-center flex-1 gap-x-2" >
 
                 <li onMouseEnter={() => OpenNav("category", true)} onMouseLeave={() => OpenNav("category", false)}
-                    className="nav_row ml-5 pr-0 ">
-                    <span className="nav_text2" >دسته‌بندی کالاها</span>
-                    <MenuIcon className="w-5 h-5 text-textBlack2 " />
+                    className="nav_row ml-5 pr-0 group  ">
+                    <span className="nav_text2 group-hover:text-[#ef5661] " >دسته‌بندی کالاها</span>
+                    <MenuIcon className="nav_icon text-textBlack2 group-hover:text-[#ef5661] " />
                     <NavCategory showsubMenu={subMenu?.category} />
 
                 </li>
 
                 <li onMouseEnter={() => OpenNav("supermarket", true)} onMouseLeave={() => OpenNav("supermarket", false)}
-                    className="nav_row nav_border ">
-                    <span className="nav_text2" >سوپرمارکت</span>
-                    <BagIcon className="nav_icon" />
+                    className="nav_row  nav_border relative group ">
+                    <span className="nav_text2 group-hover:text-[#ef5661] " >سوپرمارکت</span>
+                    <BagIcon className="nav_icon group-hover:text-[#ef5661]" />
                     <NavSupermarket showsubMenu={subMenu?.supermarket} />
                 </li>
 
 
-                <li className="nav_row">
-                    <span className="nav_text2" >تخفیف‌ها و پیشنهادها</span>
-                    <DisIcon className="nav_icon" />
+                <li className="nav_row a group  ">
+                    <span className="nav_text2 group-hover:text-[#ef5661]" >تخفیف‌ها و پیشنهادها</span>
+                    <DisIcon className="nav_icon group-hover:text-[#ef5661]" />
 
 
                 </li>
 
-                <li className="nav_row">
-                    <span className="nav_text2" >دیجی‌کالای من</span>
+                <li className="nav_row  group">
+                    <span className="nav_text2 group-hover:text-[#ef5661]" >دیجی‌کالای من</span>
 
-                    <BadgeIcon className="nav_icon" />
-
-
-                </li>
-
-
-
-                <li className="nav_row">
-                    <span className="nav_text2" >دیجی‌پلاس</span>
-
-                    <CheckIcon className="nav_icon" />
+                    <BadgeIcon className="nav_icon group-hover:text-[#ef5661]" />
 
 
                 </li>
 
 
-                <li className="nav_row">
-                    <span className="nav_text2" >دیجی‌کلاب</span>
 
-                    <GiftIcon className="nav_icon" />
+                <li className="nav_row  group">
+                    <span className="nav_text2 group-hover:text-[#ef5661]" >دیجی‌پلاس</span>
+
+                    <CheckIcon className="nav_icon group-hover:text-[#ef5661]" />
+
+
+                </li>
+
+
+                <li className="nav_row  group">
+                    <span className="nav_text2 group-hover:text-[#ef5661]" >دیجی‌کلاب</span>
+
+                    <GiftIcon className="nav_icon group-hover:text-[#ef5661]" />
 
 
                 </li>

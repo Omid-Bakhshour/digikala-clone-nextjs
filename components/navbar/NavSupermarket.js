@@ -5,7 +5,7 @@ import ArrowLeft from "@heroicons/react/outline/ArrowLeftIcon"
 function NavSupermarket({ showsubMenu }) {
     return (
         <div className={`${showsubMenu ? "flex" : "hidden"} bg-white w-[610px] min-h-[310px] rounded-b-lg h-5 absolute top-full right-0
-        overflow-hidden flex-row-reverse   `} >
+        overflow-hidden flex-row-reverse`} >
 
             {/* right */}
 
