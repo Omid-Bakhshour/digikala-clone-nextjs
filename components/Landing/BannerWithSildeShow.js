@@ -12,6 +12,8 @@ function BannerWithSildeShow() {
 
     const [SliderNum, setSliderNum] = useState(1);
     const [delay, setDelay] = useState(1);
+    const [paused, setPaused] = useState(false);
+
 
     const [touchStart, setTouchStart] = useState(0);
 
@@ -20,16 +22,11 @@ function BannerWithSildeShow() {
         setTouchStart(e.changedTouches[0].clientX);
     }
 
-
-
-
     function handleTouchEnd(e) {
         const touchEnd = (e.changedTouches[0].clientX);
 
         if (touchStart - touchEnd > 100) {
             setSliderNum(SliderNum + 1)
-
-
         }
 
         if (touchStart - touchEnd < -100) {
@@ -81,7 +78,10 @@ function BannerWithSildeShow() {
         }
         const interval = setInterval(() => ChangeSlider(), 5000)
         return () => {
-            clearInterval(interval);
+            if (!paused) {
+                clearInterval(interval);
+
+            }
         }
     }, [delay]);
 
@@ -108,7 +108,7 @@ function BannerWithSildeShow() {
             {/* right slider */}
 
 
-            <div className=" w-full md:w-2/3  h-full relative   " >
+            <div className=" w-full md:w-2/3  h-full relative   " onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}  >
 
 
                 <div onTouchStart={(e) => handleTouchStart(e)} onTouchEnd={(e) => handleTouchEnd(e)}
