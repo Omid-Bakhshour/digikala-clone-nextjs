@@ -66,11 +66,11 @@ function Slider({ bgColor, sliderImg }) {
                                 },
                             }}>
                             <SwiperSlide>
-                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider21.jpg" price="1000000" discount="10" time="2022-01-22 00:00:00" remained="70" />
+                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider21.jpg" price="100000" discount="60" time="2022-01-24 19:02:00" remained="20" />
 
                             </SwiperSlide>
                             <SwiperSlide>
-                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider22.jpg" price="719000" discount="50" time="2022-01-22 00:00:00" remained="90" />
+                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider22.jpg" price="719000" discount="50" time="2022-01-27 10:55:00" remained="70" />
 
                             </SwiperSlide>
                             <SwiperSlide>
@@ -78,13 +78,13 @@ function Slider({ bgColor, sliderImg }) {
 
                             </SwiperSlide>
                             <SwiperSlide>
-                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider24.jpg" price="719000" discount="80" time="2022-01-22 00:00:00" remained="60" />
+                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider24.jpg" price="719000" discount="80" time="2022-01-27 00:00:00" remained="60" />
 
                             </SwiperSlide>
 
 
                             <SwiperSlide>
-                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider24.jpg" price="719000" discount="99" time="2022-01-22 00:00:00" remained="40" />
+                                <SliderItem title="اسپیکر بلوتوثی قابل حمل کینگ استار مدل KBS 250" img="/images/slider24.jpg" price="719000" discount="99" time="2022-01-28 00:00:00" remained="40" />
 
                             </SwiperSlide>
 
