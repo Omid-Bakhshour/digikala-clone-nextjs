@@ -1,4 +1,5 @@
 import Slider from "../slider/Slider"
+import BannerFour from "./BannerFour"
 import BannerWithSildeShow from "./BannerWithSildeShow"
 
 
@@ -15,6 +16,8 @@ function Index() {
 
             <BannerWithSildeShow />
             <Slider bgColor="#ef394e" sliderImg="/images/sliderbanner1.png" />
+            <BannerFour img1={"/images/banner21.jpg"} img2={"/images/banner22.jpg"} img3={"/images/banner23.jpg"} img4={"/images/banner24.jpg"} />
+            <Slider bgColor="#6bb927" sliderImg="/images/bannerslider3.png" />
 
 
         </div >

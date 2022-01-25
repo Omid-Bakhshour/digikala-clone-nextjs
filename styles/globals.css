@@ -22,6 +22,22 @@
     margin: 0px;
 }
 
+a, a:hover, a:focus, a:active,a:visited {
+  text-decoration: none !important;
+  color: inherit !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -ms-touch-action: manipulation !important;
+  touch-action: manipulation !important;
+}
+
+*:focus {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+  -ms-touch-action: manipulation !important;
+  touch-action: manipulation !important;
+}
+
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
@@ -170,6 +186,15 @@
   .dot.active{
      @apply scale-110 bg-[#00bfd6] 
   }
+
+  .banner_four{
+    @apply cursor-pointer relative before:top-3  before:left-3 before:bottom-3 before:right-3  before:opacity-0
+    md:before:left-4 md:before:right-4 md:before:top-4 md:before:bottom-4 shadow-lg overflow-hidden rounded-lg  
+    before:rounded-lg before:bg-[rgba(255,255,255,0.5)] before:absolute   before:contents before:transition transform before:duration-500
+    before:ease-in-out  hover:before:opacity-100 
+  }
+
+ 
   
     
 }
