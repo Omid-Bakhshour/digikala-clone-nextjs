@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @font-face {
     font-family: iranSans;
     src: url("/fonts/IRANSansWeb.eot"),url("/fonts/IRANSansWeb.ttf"),
@@ -45,6 +46,24 @@ a, a:hover, a:focus, a:active,a:visited {
     animation-name: fade;
     animation-duration: 1.5s;
   }
+
+
+  @-webkit-keyframes bar-fill {
+    0% {
+     width:0
+    }
+    to {
+     width:100%
+    }
+   }
+   @keyframes bar-fill {
+    0% {
+     width:0
+    }
+    to {
+     width:100%
+    }
+   }
   
   @-webkit-keyframes fade {
     from {opacity: .4}
@@ -188,10 +207,21 @@ a, a:hover, a:focus, a:active,a:visited {
   }
 
   .banner_four{
-    @apply cursor-pointer relative before:top-3  before:left-3 before:bottom-3 before:right-3  before:opacity-0
-    md:before:left-4 md:before:right-4 md:before:top-4 md:before:bottom-4 shadow-lg overflow-hidden rounded-lg  
-    before:rounded-lg before:bg-[rgba(255,255,255,0.5)] before:absolute   before:contents before:transition transform before:duration-500
-    before:ease-in-out  hover:before:opacity-100 
+    @apply cursor-pointer relative before:top-0  before:left-0 before:bottom-0 before:right-0  before:opacity-0
+     shadow-lg overflow-hidden rounded-2xl hover:before:m-3  
+    before:rounded-2xl before:bg-[rgba(255,255,255,0.5)] before:absolute   before:transition before:transform before:duration-500
+      hover:before:opacity-100 
+  }
+
+  .banner_two{
+    @apply cursor-pointer relative shadow-lg overflow-hidden rounded-2xl  before:top-0  before:left-0 before:bottom-0 before:right-0  before:opacity-0
+    before:transition-all before:transform before:duration-500  before:border-2 before:border-white before:absolute before:block
+    hover:before:m-3 hover:before:opacity-100 before:ease-out before:rounded-2xl  
+  }
+
+
+  .banner_two img,.banner_four img{
+    @apply w-full h-full 
   }
 
  
