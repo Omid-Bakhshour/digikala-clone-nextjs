@@ -3,7 +3,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, Pagination } from 'swiper'
 import React, { useRef, useState } from 'react'
-import SliderItem from './SliderItem';
+import { onSliderData } from "../../data/onSlider/data"
+import OnSliderItem from './OnSliderItem';
+
 
 
 function OneSlider() {
@@ -21,6 +23,8 @@ function OneSlider() {
             setAnimation(true)
         }
     }
+
+
 
 
     return (
@@ -41,31 +45,17 @@ function OneSlider() {
                     autoplay={{ delay: 7000 }}
                     slidesPerView={1}>
 
-                    <SwiperSlide>
-                        <div className='bg-gray-500 w-full h-full flex' >
-                            <span>1</span>
+                    {onSliderData?.map(item => (
+                        <SwiperSlide key={item?.title}>
+                            <OnSliderItem img={item.img} title={item.title} price={item.price} discount={item.discount} />
 
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))
 
-                    <SwiperSlide>
-                        <div className='bg-gray-500 w-full h-full flex' >
-                            <span>2</span>
-                        </div>
-                    </SwiperSlide>
-                    {/* <SwiperSlide>
-
-                </SwiperSlide> */}
+                    }
 
                 </Swiper>
-
-
-
             </div>
-
-
-
-
         </div >
     )
 }
