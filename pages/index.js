@@ -4,6 +4,7 @@ import Header from '../components/header/Header'
 import { useState } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Landing from "../components/Landing/Index"
+import Footer from '../components/footer/Footer';
 
 export default function Home() {
 
@@ -25,6 +26,8 @@ export default function Home() {
        bg-[#acacac] opacity-50  z-[49]   `} />
 
       <Landing />
+
+      <Footer />
 
 
 
