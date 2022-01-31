@@ -28,7 +28,7 @@ function OneSlider() {
 
 
     return (
-        <div className='w-full flex flex-col rounded-lg border border-[rgba(0,191,214,.3)] overflow-hidden shadow-md bg-white h-[400px]' >
+        <div className='w-full  flex flex-col rounded-lg border border-[rgba(0,191,214,.3)] overflow-hidden shadow-md bg-white ' >
 
             <div className={`text-[#6e6e6e] w-[100%-24px] h-[57px] flex justify-center items-center mx-3 font-medium
             text-sm relative before:left-0 before:right-0 before:bottom-0 before:absolute before:h-[1px] before:bg-[#f5f5f5]

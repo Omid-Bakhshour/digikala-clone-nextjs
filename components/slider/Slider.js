@@ -1,11 +1,8 @@
 
 import ArrowLeft from "@heroicons/react/outline/ChevronLeftIcon"
 import SliderItem from "./SliderItem";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
-
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade } from 'swiper';
 
 
 
@@ -18,17 +15,6 @@ function Slider({ bgColor, sliderImg }) {
 
             <section className="py-9 px-4 flex md:flex-row-reverse items-center justify-center flex-col gap-y-3  " >
 
-                <a className=" flex-col my-0 mx-11 w-[170px] cursor-pointer group "  >
-                    <img src={sliderImg} className="w-full h-[calc(100%-41px)]" />
-
-                    <div className=" flex-row items-center justify-center gap-x-2 text-white py-2 px-4
-                     rounded-md border border-white hidden sm:flex " >
-
-                        <ArrowLeft className="w-4 h-4 group-hover:animate-bounce" />
-
-                        <span className="text-sm font-bold" >مشاهده همه</span>
-                    </div>
-                </a>
 
                 {/* slider */}
 
@@ -40,7 +26,7 @@ function Slider({ bgColor, sliderImg }) {
 
 
                         <Swiper dir="rtl"
-                            modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+                            modules={[Navigation]}
                             spaceBetween={8}
                             navigation
                             breakpoints={{
@@ -98,6 +84,21 @@ function Slider({ bgColor, sliderImg }) {
 
                     </div>
                 </div>
+
+
+
+
+                <a className=" flex-col my-0 mx-11 w-[170px] cursor-pointer group "  >
+                    <img src={sliderImg} className="w-full h-[calc(100%-41px)]" />
+
+                    <div className=" flex-row items-center justify-center gap-x-2 text-white py-2 px-4
+                     rounded-md border border-white hidden sm:flex " >
+
+                        <ArrowLeft className="w-4 h-4 group-hover:animate-bounce" />
+
+                        <span className="text-sm font-bold" >مشاهده همه</span>
+                    </div>
+                </a>
 
             </section>
 

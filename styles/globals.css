@@ -163,7 +163,7 @@ a, a:hover, a:focus, a:active,a:visited {
 
   .prev {
     
-    @apply  ml-3
+    @apply left-0  ml-3
   }
 
 

@@ -9,10 +9,6 @@ import SliderImg from "./SliderImg";
 
 function SliderItem({ title, img, price, discount, time, remained }) {
 
-
-
-
-
     const [hasRemained, setHasRemained] = useState(false);
 
     useEffect(() => {

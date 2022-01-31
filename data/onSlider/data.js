@@ -2,6 +2,7 @@
 export const onSliderData = [
     {
         title: "مایع نرم کننده حوله و لباس سافتلن مدل طلایی حجم 2 لیتر",
+        img: "/images/oneslider1.jpg",
         price: "44700",
         discount: "15"
     },

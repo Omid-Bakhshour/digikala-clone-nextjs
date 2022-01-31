@@ -26,10 +26,21 @@ function PriceWithDiscount({ price, discount }) {
             {/* top */}
 
             <div className={`${showDiscount ? "opacity-100" : "opacity-0"} flex  flex-row gap-x-2 items-center justify-end`}>
-                <span className="text-[#acacac] line-through text-base font-normal ">{Dynamicfun.FinalNumber(price)}</span>
+                {price && (
+                    <span className="text-[#acacac] line-through text-base font-normal ">{Dynamicfun.FinalNumber(price)}</span>
 
-                <span className="bg-[#fb3449] font-bold text-white py-1 px-[10px] text-base min-w-[43px] h-6 text-center flex items-center
-                     rounded-full" >{Dynamicfun.convertToPersianNumber(discount)}٪</span>
+                )
+
+                }
+
+                {
+                    discount && (
+
+                        <span className="bg-[#fb3449] font-bold text-white py-1 px-[10px] text-base min-w-[43px] h-6 text-center flex items-center
+                        rounded-full" >{Dynamicfun.convertToPersianNumber(discount)}٪</span>
+                    )
+                }
+
             </div>
 
             {/* bottom */}

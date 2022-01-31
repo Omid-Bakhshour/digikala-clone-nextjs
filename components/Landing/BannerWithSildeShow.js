@@ -89,30 +89,18 @@ function BannerWithSildeShow() {
 
     return (
 
-        <div className="w-full flex flex-col-reverse items-center  pt-4 md:pt-0 md:flex-row px-4 gap-y-3 md:gap-x-3" >
+        <div dir="rtl" className="w-full flex flex-col-reverse items-center  pt-4 md:pt-0 md:flex-row px-4 gap-y-3 md:gap-x-3" >
 
-            {/* left */}
-
-            <div className="md:w-1/3 w-full flex flex-col " >
-
-                <a className="w-full mb-4  " >
-                    <img className="rounded-2xl shadow-md" src="/images/bannersecond1.jpg" />
-                </a>
-
-                <a className="w-full " >
-                    <img className="rounded-2xl shadow-md " src="/images/bannersecond2.jpg" />
-                </a>
-            </div>
 
 
             {/* right slider */}
 
 
-            <div className=" w-full md:w-2/3  h-full relative   " onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}  >
+            <div className=" w-full md:w-2/3   relative self-stretch  " onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}  >
 
 
                 <div onTouchStart={(e) => handleTouchStart(e)} onTouchEnd={(e) => handleTouchEnd(e)}
-                    className="w-full h-full relative  " >
+                    className="w-full h-full flex relative  " >
 
 
                     <div className="mySlides fade" >
@@ -137,8 +125,8 @@ function BannerWithSildeShow() {
 
 
 
-                <ArrowLeft className="prev " onClick={() => plusSlides(SliderNum - 1)} />
-                <ArrowRight className="next " onClick={() => plusSlides(SliderNum + 1)} />
+                <ArrowLeft className="prev " onClick={() => plusSlides(SliderNum + 1)} />
+                <ArrowRight className="next " onClick={() => plusSlides(SliderNum - 1)} />
 
                 <div className="flex w-full flex-row absolute bottom-4 left-0 right-0 justify-center items-center">
                     <span className="dot " onClick={() => plusSlides(1)} />
@@ -153,6 +141,20 @@ function BannerWithSildeShow() {
 
 
             {/* end sldier */}
+
+            {/* left */}
+
+            <div className="md:w-1/3 w-full flex flex-col  " >
+
+                <a className="w-full mb-4  " >
+                    <img className="rounded-2xl shadow-md" src="/images/bannersecond1.jpg" />
+                </a>
+
+                <a className="w-full " >
+                    <img className="rounded-2xl shadow-md " src="/images/bannersecond2.jpg" />
+                </a>
+            </div>
+
 
         </div>
 

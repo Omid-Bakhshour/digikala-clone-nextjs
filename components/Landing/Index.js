@@ -1,14 +1,16 @@
+import CategorySlider from "../slider/CategorySlider"
 import OneSlider from "../slider/OneSlider"
 import Slider from "../slider/Slider"
 import Banner2 from "./Banner2"
 import BannerFour from "./BannerFour"
 import BannerWithSildeShow from "./BannerWithSildeShow"
+import { slider1 } from "../../data/sliders/data1"
 
 
 function Index() {
 
     return (
-        <div className="w-full max-w-[1366px] mt-[120px] flex flex-col mx-auto  " >
+        <div dir="rtl" className="w-full max-w-[1366px] mt-[120px] flex flex-col mx-auto  " >
 
             <div className="w-full mb-4 px-4 pt-4 hidden md:flex " >
                 <a className=" cursor-pointer" >
@@ -23,10 +25,9 @@ function Index() {
             <Banner2 img1={"/images/banner31.jpg"} img2={"/images/banner32.jpg"} />
 
             <div className="w-full flex flex-row  px-4 my-4" >
-
-                <div className="w-[17%] hidden md:flex" >
+                <CategorySlider title={"پاوربانک (شارژر همراه)"} data={slider1} />
+                <div className="w-[20%] xl:w-[17%]  hidden lg:flex  self-stretch" >
                     <OneSlider />
-
                 </div>
 
 
