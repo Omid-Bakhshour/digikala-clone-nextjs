@@ -1,11 +1,15 @@
 
 import ShoppingCartIcon from "@heroicons/react/outline/ShoppingCartIcon"
 import UserIcon from "@heroicons/react/outline/UserIcon"
+import { route } from "next/dist/server/router";
+
+import { useRouter } from "next/router"
 
 import Search from "./Search"
 
 
 function Header({ isSearchOpen, setIsSearchOpen }) {
+    const router = useRouter();
     return (
         <header className="flex fixed top-0 right-0 left-0 flex-row  px-4 py-4 bg-white z-[100]  min-w-[1000px] max-w-[1650px] ">
 
@@ -50,7 +54,7 @@ function Header({ isSearchOpen, setIsSearchOpen }) {
 
                 <div className="flex items-center relative z-[239]" >
 
-                    <a href="/" className="h-[30px]" >
+                    <a onClick={() => router.push("/new")} className="h-[30px]" >
                         <img src="/images/logo.svg" />
 
                     </a>

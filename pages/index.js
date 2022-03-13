@@ -5,11 +5,24 @@ import { useState } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Landing from "../components/Landing/Index"
 import Footer from '../components/footer/Footer';
+import { useSelector, useDispatch } from "react-redux"
+import { AddDataToBasket } from "../redux/actions/basketActions"
+
+import { useEffect } from "react"
+
 
 export default function Home() {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(AddDataToBasket({ item: 1 }))
+  }, [])
+
+
+
+
 
 
   return (
