@@ -8,7 +8,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 
 function ShowDetail() {
     return (
-        <div className='min-w-[300px] my-2 ml-2 border-t border-[#e0e0e2]' >
+        <div className='min-w-[400px] my-2 ml-2 border-t border-[#e0e0e2]' >
 
             <div className='w-full flex flex-row my-2  items-start pb-3 min-h-[350px]' >
 
@@ -28,10 +28,10 @@ function ShowDetail() {
 
             </div>
 
-            <div className='w-full flex flex-row gap-x-2 items-center' >
-                <HiOutlineInformationCircle className='w-4 h-4 text-[#81858b]' />
+            <div className='w-full flex flex-row mb-6 gap-x-2 items-center' >
+                <HiOutlineInformationCircle className='w-8 h-8  text-[#81858b]' />
 
-                <p className='text-[#424750] text-sm font-normal text-justify' >امکان برگشت کالا در گروه ریمل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمپ کالا باز نشده باشد.</p>
+                <p className='text-[#424750] text-[0.85rem] font-normal text-justify' >امکان برگشت کالا در گروه ریمل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمپ کالا باز نشده باشد.</p>
 
             </div>
 

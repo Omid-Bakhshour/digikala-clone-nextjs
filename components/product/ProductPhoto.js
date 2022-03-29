@@ -13,7 +13,7 @@ import { BsInfoCircle } from "react-icons/bs";
 
 function ProductPhoto() {
     return (
-        <div className='w-1/3 flex flex-col ml-4' >
+        <div className='w-[45%] flex flex-col ml-4' >
             <div className='py-2 flex flex-row text-[#e3122f] gap-x-4 text-base font-bold'>
                 پیشنهاد شگفت انگیز
                 <div>
