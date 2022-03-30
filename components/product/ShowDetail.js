@@ -10,7 +10,7 @@ function ShowDetail() {
     return (
         <div className='min-w-[400px] my-2 ml-2 border-t border-[#e0e0e2]' >
 
-            <div className='w-full flex flex-row my-2  items-start pb-3 min-h-[350px]' >
+            <div className='w-full flex flex-row my-2  items-start pb-3 min-h-[250px]' >
 
                 <div className='flex flex-row items-center'>
                     <AiFillStar className='text-[#ffd700] w-4 h-4' />
